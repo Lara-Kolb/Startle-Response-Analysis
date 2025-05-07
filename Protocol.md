@@ -4,8 +4,9 @@
 
 1. [Introduction](#intro)
 2. [Experimental Design](#exp_des)
-    1. [Setup](#setup)
-    2. [Procedure](#procedure)
+    1. [Background](#background)
+    2. [Setup](#setup)
+    3. [Procedure](#procedure)
 3. [Software](#software)
     1. [Recording](#recording)
     2. [Analysis](#analysis)
@@ -15,13 +16,15 @@
 
 ## Introduction <a name="intro"></a>
 
-This is a protocol and guide for the startle response experiments. First, we will go over the setup and procedure of the experiment, before moving on to the software used for recording and analysis. Within this repository, you will also find the example outputs from three separate recording sessions for reference.
+This is a protocol and guide for the startle response experiments. It will cover the setup and procedure of the experimentas well as the software used for recording and analysis. This repository also contains the example outputs from three separate recording sessions for reference.
 
 
 
 ## Experimental Design <a name="exp_des"></a>
 
-The idea behind the experiment is to measure and analyze the reaction of a mouse to a startle response, that being a loud, unexpected noise. In the context of ataxia 13, it is of interest whether and in what way different strains and age groups react differently to this startle. The basic version of the experiment, wherein a constant stream of white noise is suddenly overlaid with a loud noise, can be changed and adjusted in several ways, for example by introducing a quieter noise at different times before the startle to warn the mouse, or even a moment of silence where the white noise cuts out. Both have been shown to decrease the startle response.
+### Background <a name="background"></a>
+
+Acoustic startle response (ASR) experiments are a very useful tool in examining the auditory processing of mammals under various conditions and variations. Given a sudden, unexpected auditory stimulus, such as a loud noise within previous white background noise, the muscles of mammals involuntarily contract across their bodies, causing a measurable movement. There are a multitude of conditions that can impact the strength of this reflex, but for purposeful modulation, pre-pulse inhibition (PPI) is used to test for changes in this response. If a lesser sound which is not strong enough to in itself facilitate a startle response is played before the actual startle, one can see a decrease in the response. This "warning sound" can also be replaced with a gap in the constant background noise, and length and offset from the startle can be modulated. This allows for a very flexible experiment that does not require prior training of the animals. This is for example crucial when testing for early hearing loss in mouse models with ataxia 13, where any experiment that would require training would be too time intensive to be viable.
 
 
 ### Setup <a name="setup"></a>
@@ -90,9 +93,12 @@ The analysis tab is where you select and export your data. `Data Selection` show
 In order to familiarize yourself with the analysis software, it would be best to go through both notebooks once to know what outputs to expect. <br>
 To now use your own data, you first have to set up the input folder. Create a new folder in the same one as the notebooks, for example named after the year of the recording, the operator, etc. Inside this folder, create new folders, one for each animal, and name them accordingly. Within these folders, place all CSV files that contain recordings from the respective animal. The animal folder and CSV file names will be used internally to label slices, but are otherwise not important for anything other than debugging . Lastly, in the "Peakfinder" notebook, change the variable `input_dir` of the second codeblock to the name you gave to the folder containing the animal folders. <br>
 There are two different notebooks used for analysis, the first one, "Peakfinder", taking the raw data and turning it into excel files containing the reaction time, the time until the peak, the difference between the former two and the strength of the peak, all averaged across the different experiments. The second notebook, "Analyzer", takes these files and runs several tests on them, examining changes across animals and experiments. Especially the latter can and should be edited by you to fit your specific needs. <br>
-However, one thing you may need to adjust in the Peakfinder notebook is the `startle_time` library, wherein you need to insert the experiment names and times at which the startle sound is played. Should there be multiple in one trial, insert them as a list. The variable `startle_offset` defines the size of the examined window, making the program save this many milliseconds of the recording before and after the startle. Depending on what you are examining, you might also need to adjust the code to save things like the strain and age of the animal into the output files. <!-- we could do that and just disable it by default --><br>
+However, one thing you may need to adjust in the Peakfinder notebook is the `startle_time` library, wherein you need to insert the experiment names and times at which the startle sound is played. If there be multiple startles in one trial, insert them as a list. The variable `length` at the beginning of the code block defines the size of the examined window, making the program save this many milliseconds of the recording before and after the startle. <br>
+Depending on what you are examining, you might also need to adjust the code to save things like the strain and age of the animal into the output files. <!-- we could do that and just disable it by default --><br>
 Other settings you may want to adjust are `output_dir`, which defines where you want the output files to go, `verbose`, which when set to `False` mutes all output except for error messages, and `excel_output`, which when `False` makes the program output CSV files instead of excel files. CSV files are faster to read by other programs, however they are less readable to humans due to their lack of neat looking columns and rows. However, due to the low amount of data in the output files, this should not make a noticeable difference. <br>
-Further details on the code are included in the notebooks markdown sections and comments. 
+Further details on the code are included in the notebooks markdown sections and comments. <br>
+
+The notebook for trend analysis is currently incomplete and will be updated at a later time.
 
 
 
@@ -108,4 +114,4 @@ Call customer support.
 
 
 ### Analysis Software Error
-Usually, any error the notebooks put out is well documented. Check if the files look ok, whether or not the startle times are set correctly, and if in doubt, look up the error code. If the code block handling the creation of the library which will be turned into the output files says that it encountered strange peaks, examine the respective recording, either directly in the raw file or by creating a new code block to plot or print out the segment. If the peak really is too early, late or non-existent, proceed as is fit for your use case. If you are sure that something is wrong with the code or need help understanding a part of it, feel free to reach out to me directly or via another group member. If you happen to have a fix for it and know your way around GitHub, you could even submit a pull request for it.
+Usually, any error the notebooks put out is well documented. Check if the files look ok, whether or not the startle times are set correctly, and if in applicable, look up the error code. If the code block handling the creation of the library which will be turned into the output files says that it encountered a lot of bad peaks, examine the respective recording, either directly in the raw file or via the `Debugging` code block at the very end of the first notebook. If the peak really is too early, late or non-existent, proceed as is fit for your use case, adjusting whether or not to discard them in the configuration block. If you are sure that something is wrong with the code or need help understanding a part of it, feel free to reach out to me directly or via another group member. If you happen to have a fix for it and know your way around GitHub, you could even submit a pull request.
