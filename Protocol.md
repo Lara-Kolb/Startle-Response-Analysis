@@ -99,7 +99,7 @@ The analysis tab is where you select and export your data. `Data Selection` show
 #### Archive Tab
 `Data Directory` defines the directory all recording data is saved to, while the `Reindexing` option allows you to update the `Data Selection` whenever you change directory. The `Data Selection` window also has this option. <br>
 Recorded data is saved onto the `Data (D:)` drive. Make sure to make a folder for your recordings and set it as the new data directory before starting your line of experiments. <br>
-Should you ever wish to back up your experiments and trials, they can be found in <!-- C:/ something -->.
+Should you ever wish to back up your experiments and trials, they can be found in the TSE folder on drive C.
 
 
 
@@ -108,7 +108,8 @@ Should you ever wish to back up your experiments and trials, they can be found i
 In order to familiarize yourself with the analysis software, it would be best to go through both notebooks once to know what outputs to expect. <br>
 To now use your own data, you first have to set up the input folder. Create a new folder in the same one as the notebooks, for example named after the year of the recording, the operator, etc. Inside this folder, create new folders, one for each animal, and name them accordingly. Within these folders, place all CSV files that contain recordings from the respective animal. Depending on how you did the recordings, this can be just one file. The animal folder and CSV file names will be used internally to label slices, but are otherwise not important for anything other than debugging. Lastly, in the "Peakfinder" notebook, change the variable `input_dir` of the second codeblock to the name you gave to the folder containing the animal folders. <br>
 There are two different notebooks used for analysis, the first one, "Peakfinder", taking the raw data and turning it into excel files containing the reaction time, the time until the peak, the difference between the former two and the strength of the peak, all averaged across the different experiments. The second notebook, "Analyzer", takes these files and runs several tests on them, examining changes across animals and experiments. Especially the latter can and should be edited by you to fit your specific needs. <br>
-However, one thing you may need to adjust in the Peakfinder notebook is the `startle_time` library, wherein you need to insert the experiment names and times at which the startle sound is played. If there be multiple startles in one trial, insert them as a list. <br>
+Additionally, there are two dictionaries you need to adjust. The `startle_time` dictionary links the trials to the times in which the startle is played within them. You will need to insert your own, should they not already be included. If there be multiple startles in one trial, insert them as a list. <br>
+The second dictionary is `sex`, wherein you need to link the animals by number to their sex. Note that the animal numbers are shortened to their final digits, so there may be overlap with older entries when you enter your own. <br>
 Other settings you may want to adjust are `output_dir`, which defines where you want the output files to go, `verbose`, which when set to `False`, mutes all output except for error messages, and `excel_output`, which when `False` makes the program output CSV files instead of excel files. CSV files are faster to read by other programs, however they are less readable to humans due to their lack of neat looking columns and rows. With the output files containing only a small low amount of data, this should not make a noticeable difference. <br>
 Further details on the code are included in the notebooks markdown sections and comments. <br>
 
@@ -120,7 +121,7 @@ The notebook for trend analysis is currently incomplete and will be updated at a
 
 
 ### Oh my god it escaped!
-Don't panic. The mouse may be faster and more agile than you, but (hopefully) it is not smarter. Stay calm, and attempt to scoop it up again as done before. It will likely move towards something it perceives as cover - a pile of cables, a dark corner, a bag or jacket, etc. Simply check all of these spots until you find it, and avoid loud noises or rash movements to not scare it further.
+Don't panic. The mouse may be faster and more agile than you, but (hopefully) it is not smarter. Stay calm, and attempt to scoop it up again as done before. It will likely move towards something it perceives as cover - a pile of cables, a dark corner, a bag or jacket, etc. Carefully check all of these spots until you find it, and avoid loud noises or rash movements to not scare it further.
 
 
 ### Recording Software Error
