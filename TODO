@@ -1,0 +1,7 @@
+- missing recordings
+- SDT implementation: separate top 10?
+- which threshold multiplier? -> problem if too high: delayed reaction time; 20 looks good?
+- do we even need peakTime and difference?
+- strength normalization ok? what scaling factor?
+
+- data analysis update for 3rd recording
