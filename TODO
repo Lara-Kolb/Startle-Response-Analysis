@@ -1,6 +1,7 @@
 - missing recordings
 - SDT implementation: separate top 10?
-- which threshold multiplier? -> problem if too high: delayed reaction time; 20 looks good?
+- which threshold multiplier? -> problem if too high: delayed reaction time (7: mult = 20, 8: 10, 9: 6, 10: 3, 11: 20 for det, 6 for RT, 12&13: 20|9) -> use high one for peak detection, low one for reaction time measurement? 
+                                                                                                                -> problem 2: too low could falsify result as well, making it too early (20|9 looks ok?)
 - do we even need peakTime and difference?
 - strength normalization ok? what scaling factor?
 
