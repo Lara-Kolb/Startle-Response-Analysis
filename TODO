@@ -2,7 +2,13 @@
 - SDT implementation: separate top 10?
 - which threshold multiplier? -> problem if too high: delayed reaction time (7: mult = 20, 8: 10, 9: 6, 10: 3, 11: 20 for det, 6 for RT, 12&13: 20|9) -> use high one for peak detection, low one for reaction time measurement? 
                                                                                                                 -> problem 2: too low could falsify result as well, making it too early (20|9 looks ok?)
+                                                                                                                -> problem 3: changing between 60, 50, 40, 30 and 20 for det threshold changes amount of hits by a lot
+                                                                                                                -> weigh FPR against miss rate empirically -> 20-35 picks up bad ones, 40 misses valid ones -> use 40 to be safe?
 - do we even need peakTime and difference?
 - strength normalization ok? what scaling factor?
+- ValueG or DeltaG?
+- How do we handle discarded recordings? What do we say about them / how to we write about and analyze them?
+- with 4th recording we could model age effects better
 
 - data analysis update for 3rd recording
+
