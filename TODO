@@ -1,9 +1,11 @@
 - missing recordings
 - SDT implementation: separate top 10?
-- which threshold multiplier? -> problem if too high: delayed reaction time (7: mult = 20, 8: 10, 9: 6, 10: 3, 11: 20 for det, 6 for RT, 12&13: 20|9) -> use high one for peak detection, low one for reaction time measurement? 
-                                                                                                                -> problem 2: too low could falsify result as well, making it too early (20|9 looks ok?)
-                                                                                                                -> problem 3: changing between 60, 50, 40, 30 and 20 for det threshold changes amount of hits by a lot
-                                                                                                                -> weigh FPR against miss rate empirically -> 20-35 picks up bad ones, 40 misses valid ones -> use 40 to be safe?
+- which threshold multiplier? 
+    -> problem if too high: delayed reaction time (7: mult = 20, 8: 10, 9: 6, 10: 3, 11: 20 for det, 6 for RT, 12&13: 20|9) -> use high one for peak detection, low one for reaction time measurement? 
+    -> problem 2: too low could falsify result as well, making it too early (20|9 looks ok?)
+    -> problem 3: changing between 60, 50, 40, 30 and 20 for det threshold changes amount of hits by a lot
+    -> weigh FPR against miss rate empirically -> 20-35 picks up bad ones, 40 misses some valid ones -> use 40 to be safe?
+
 - do we even need peakTime and difference?
 - strength normalization ok? what scaling factor?
 - ValueG or DeltaG?
@@ -11,6 +13,10 @@
 - with 4th recording we could model age effects better
 - do the top 10 hit rates even mean anything? same with any analysis run on them?
 - why are hit rates so high? probably ok though, just seems odd
+- what's the right strain?
+- what goes into the figures and tables section of the thesis?
+- what site to share raw recording data?
+- does separating results by experiment make sense? Maybe instead by sex, age, etc.
 
 - data analysis update for 3rd recording
 
