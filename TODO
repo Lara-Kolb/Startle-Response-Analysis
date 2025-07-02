@@ -22,7 +22,7 @@ spherificity using Mauchly’s test. If the assumption failed, the
 Greenhouse-Geisser correction was then applied. A value of
 p,0.05 was considered statistically significant. Furthermore, post-
 hoc tests were done with Bonferroni adjustment to compare within
-subject significance analysis."         -> is our procedure ok?        
+subject significance analysis."         -> is our procedure ok?   -> yeah this is for PPI frequency, not interesting for us     
 - why mice slow?               -> old measurements from the 80s      
 - why is peakTime so often 30
 - try to get background noise only while mouse stands still -> median, not average -> why so low?
