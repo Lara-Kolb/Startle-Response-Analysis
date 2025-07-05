@@ -6,16 +6,15 @@
     -> problem 3: changing between 60, 50, 40, 30 and 20 for det threshold changes amount of hits by a lot
     -> weigh FPR against miss rate empirically -> 20-35 picks up bad ones, 40 misses some valid ones -> use 40 to be safe?
 
-- do we even need peakTime and difference? -> lesser strength = more time to reach it?
-- strength normalization ok? what scaling factor?
-- ValueG or DeltaG?
+- do we even need peakTime and difference? -> lesser strength = more time to reach it? -> no, vice versa
+- strength normalization ok? what scaling factor? -> removed
 - How do we handle discarded recordings? What do we say about them / how to we write about and analyze them?
-- with 4th recording we could model age effects better
-- do the top 10 hit rates even mean anything? same with any analysis run on them?
-- why are hit rates so high? probably ok though, just seems odd
+- with 4th recording we could model age effects better -> no
+- do the top 10 hit rates even mean anything? same with any analysis run on them? -> no we merge them anyway
+- why are hit rates so high? probably ok though, just seems odd -> looks fine
 - what's the right strain? -> R420H (heterozygote, ours are WT (not homo or heterozygote)) CBA/J WT Jackson Lab (KCNC3 genotype)
-- what goes into the figures and tables section of the thesis?
-- what site to share raw recording data?
+- what goes into the figures and tables section of the thesis? -> figures and tables...
+- what site to share raw recording data? -> found one
 - does separating results by experiment make sense? Maybe instead by sex, age, etc.
 - "The data was checked for
 spherificity using Mauchly’s test. If the assumption failed, the
@@ -23,11 +22,6 @@ Greenhouse-Geisser correction was then applied. A value of
 p,0.05 was considered statistically significant. Furthermore, post-
 hoc tests were done with Bonferroni adjustment to compare within
 subject significance analysis."         -> is our procedure ok?   -> yeah this is for PPI frequency, not interesting for us     
-- why mice slow?               -> old measurements from the 80s      
+- why mice slow?               -> old measurements from the 80s, different method  
 - why is peakTime so often 30
 - try to get background noise only while mouse stands still -> median, not average -> why so low?
-
-
-ALL OF OUR VALUES IN THE THESIS ARE WRONG BECAUSE WE DIDN'T MERGE THE DATASETS
-
-strength isn't normal if not fitted -> separate by sex first???
