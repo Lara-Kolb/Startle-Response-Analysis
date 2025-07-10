@@ -1,21 +1,20 @@
-- missing recordings
-- SDT implementation: separate top 10?
-- which threshold multiplier? 
+- missing recordings -> it's fine, software error
+- SDT implementation: separate top 10? -> no
+- which threshold multiplier? -> 6, 24
     -> problem if too high: delayed reaction time (7: mult = 20, 8: 10, 9: 6, 10: 3, 11: 20 for det, 6 for RT, 12&13: 20|9) -> use high one for peak detection, low one for reaction time measurement? 
     -> problem 2: too low could falsify result as well, making it too early (20|9 looks ok?)
     -> problem 3: changing between 60, 50, 40, 30 and 20 for det threshold changes amount of hits by a lot
-    -> weigh FPR against miss rate empirically -> 20-35 picks up bad ones, 40 misses some valid ones -> use 40 to be safe?
+    -> weigh FPR against miss rate empirically -> 20-35 picks up bad ones, 40 misses some valid ones -> use 40 to be safe? -> 6, 24
 
 - do we even need peakTime and difference? -> lesser strength = more time to reach it? -> no, vice versa
 - strength normalization ok? what scaling factor? -> removed
-- How do we handle discarded recordings? What do we say about them / how to we write about and analyze them?
+- How do we handle discarded recordings? What do we say about them / how to we write about and analyze them? -> too few to be important
 - with 4th recording we could model age effects better -> no
 - do the top 10 hit rates even mean anything? same with any analysis run on them? -> no we merge them anyway
 - why are hit rates so high? probably ok though, just seems odd -> looks fine
 - what's the right strain? -> R420H (heterozygote, ours are WT (not homo or heterozygote)) CBA/J WT Jackson Lab (KCNC3 genotype)
 - what goes into the figures and tables section of the thesis? -> figures and tables...
 - what site to share raw recording data? -> found one
-- does separating results by experiment make sense? Maybe instead by sex, age, etc.
 - "The data was checked for
 spherificity using Mauchly’s test. If the assumption failed, the
 Greenhouse-Geisser correction was then applied. A value of
@@ -25,3 +24,8 @@ subject significance analysis."         -> is our procedure ok?   -> yeah this i
 - why mice slow?               -> old measurements from the 80s, different method  
 - why is peakTime so often 30
 - try to get background noise only while mouse stands still -> median, not average -> why so low?
+
+
+
+- how do we measure strength, in what time window?
+- k=3 or k=6 for measurement?
