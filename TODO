@@ -6,7 +6,6 @@
     -> problem 3: changing between 60, 50, 40, 30 and 20 for det threshold changes amount of hits by a lot
     -> weigh FPR against miss rate empirically -> 20-35 picks up bad ones, 40 misses some valid ones -> use 40 to be safe? -> 6, 24
 
-- do we even need peakTime and difference? -> lesser strength = more time to reach it? -> no, vice versa
 - strength normalization ok? what scaling factor? -> removed
 - How do we handle discarded recordings? What do we say about them / how to we write about and analyze them? -> too few to be important
 - with 4th recording we could model age effects better -> no
@@ -22,10 +21,31 @@ p,0.05 was considered statistically significant. Furthermore, post-
 hoc tests were done with Bonferroni adjustment to compare within
 subject significance analysis."         -> is our procedure ok?   -> yeah this is for PPI frequency, not interesting for us     
 - why mice slow?               -> old measurements from the 80s, different method  
-- why is peakTime so often 30
+- why is peakTime so often 30 
 - try to get background noise only while mouse stands still -> median, not average -> why so low?
 
 
 
-- how do we measure strength, in what time window?
-- k=3 or k=6 for measurement?
+- how do we measure strength, in what time window? -> 500 ms, test RMS, AUC, decay time constant (slop, exponential fits) and peak amplitude and split up strength analysis to those 4
+- k=3 or k=6 for measurement? -> 3 -> no 6
+
+
+- give maximum units, also give avg for males and females then give avg difference
+
+
+- do we even need peakTime and difference? -> lesser strength = more time to reach it? -> SAVE AND USE MAX VALUE INSTEAD!
+
+Mihai on vacation after August 21st, so discuss on 18th (Monday)
+back on 9th-10th
+
+- shorten link
+
+- pubmed search stancu myelin for paper for ethics statement
+
+After we're done:
+- update Protocol and Analyzer
+- make it idiot proof 
+
+- Mittwoch 10:00
+
+notebookfm!
