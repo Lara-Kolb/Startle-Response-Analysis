@@ -19,10 +19,10 @@ spherificity using Mauchly’s test. If the assumption failed, the
 Greenhouse-Geisser correction was then applied. A value of
 p,0.05 was considered statistically significant. Furthermore, post-
 hoc tests were done with Bonferroni adjustment to compare within
-subject significance analysis."         -> is our procedure ok?   -> yeah this is for PPI frequency, not interesting for us     
+subject significance analysis."         -> is our procedure ok?   -> this is for PPI frequency, not interesting for us     
 - why mice slow?               -> old measurements from the 80s, different method  
 - why is peakTime so often 30 
-- try to get background noise only while mouse stands still -> median, not average -> why so low?
+- try to get background noise only while mouse stands still -> median, not average -> why so low? -> it's fine
 
 
 
@@ -30,7 +30,7 @@ subject significance analysis."         -> is our procedure ok?   -> yeah this i
 - k=3 or k=6 for measurement? -> 3 -> no 6
 
 
-- give maximum units, also give avg for males and females then give avg difference
+- give maximum units, also give avg for males and females then give avg difference -> done
 
 
 - do we even need peakTime and difference? -> lesser strength = more time to reach it? -> SAVE AND USE MAX VALUE INSTEAD!
@@ -38,7 +38,7 @@ subject significance analysis."         -> is our procedure ok?   -> yeah this i
 Mihai on vacation after August 21st, so discuss on 18th (Monday)
 back on 9th-10th
 
-- shorten link
+- shorten link to raw data
 
 - pubmed search stancu myelin for paper for ethics statement
 
@@ -48,4 +48,8 @@ After we're done:
 
 - Mittwoch 10:00
 
-notebookfm!
+- notebookfm
+
+- exclusion messes up top 10 collection -> solved
+
+- redo basically all of Analyzer
