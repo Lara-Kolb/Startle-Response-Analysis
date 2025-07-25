@@ -46,10 +46,10 @@ After we're done:
 - update Protocol and Analyzer
 - make it idiot proof 
 
-- Mittwoch 10:00
+- Wednesday 10:00
 
 - notebookfm
 
 - exclusion messes up top 10 collection -> solved
 
-- redo basically all of Analyzer
+- redo basically all of Analyzer and make it also return usable values
