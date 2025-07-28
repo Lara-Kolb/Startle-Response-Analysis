@@ -53,3 +53,5 @@ After we're done:
 - exclusion messes up top 10 collection -> solved
 
 - redo basically all of Analyzer and make it also return usable values
+
+- make RESULTS_DATES df even if useless just for completion's sake
