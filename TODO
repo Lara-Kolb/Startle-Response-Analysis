@@ -63,4 +63,5 @@ also do literature search
 investigate further
 
 
-male vs female strength/RT effect strength values seem inverted; also why is tau different
+add offset asr and ppi comparison
+check for correlation between peakValue and AUC / tau
