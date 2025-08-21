@@ -1,67 +1,24 @@
-- missing recordings -> it's fine, software error
-- SDT implementation: separate top 10? -> no
-- which threshold multiplier? -> 6, 24
-    -> problem if too high: delayed reaction time (7: mult = 20, 8: 10, 9: 6, 10: 3, 11: 20 for det, 6 for RT, 12&13: 20|9) -> use high one for peak detection, low one for reaction time measurement? 
-    -> problem 2: too low could falsify result as well, making it too early (20|9 looks ok?)
-    -> problem 3: changing between 60, 50, 40, 30 and 20 for det threshold changes amount of hits by a lot
-    -> weigh FPR against miss rate empirically -> 20-35 picks up bad ones, 40 misses some valid ones -> use 40 to be safe? -> 6, 24
-
-- strength normalization ok? what scaling factor? -> removed
-- How do we handle discarded recordings? What do we say about them / how to we write about and analyze them? -> too few to be important
-- with 4th recording we could model age effects better -> no
-- do the top 10 hit rates even mean anything? same with any analysis run on them? -> no we merge them anyway
-- why are hit rates so high? probably ok though, just seems odd -> looks fine
-- what's the right strain? -> R420H (heterozygote, ours are WT (not homo or heterozygote)) CBA/J WT Jackson Lab (KCNC3 genotype)
-- what goes into the figures and tables section of the thesis? -> figures and tables...
-- what site to share raw recording data? -> found one
-- "The data was checked for
-spherificity using Mauchly’s test. If the assumption failed, the
-Greenhouse-Geisser correction was then applied. A value of
-p,0.05 was considered statistically significant. Furthermore, post-
-hoc tests were done with Bonferroni adjustment to compare within
-subject significance analysis."         -> is our procedure ok?   -> this is for PPI frequency, not interesting for us     
-- why mice slow?               -> old measurements from the 80s, different method  
-- why is peakTime so often 30 
-- try to get background noise only while mouse stands still -> median, not average -> why so low? -> it's fine
-
-
-
-- how do we measure strength, in what time window? -> 500 ms, test RMS, AUC, decay time constant (slop, exponential fits) and peak amplitude and split up strength analysis to those 4
-- k=3 or k=6 for measurement? -> 3 -> no 6
-
-
-- give maximum units, also give avg for males and females then give avg difference -> done
-
-
-- do we even need peakTime and difference? -> lesser strength = more time to reach it? -> SAVE AND USE MAX VALUE INSTEAD!
-
 Mihai on vacation after August 21st, so discuss on 18th (Monday)
 back on 9th-10th
 
-- shorten link to raw data
+
+
+- shorten link to raw data in thesis
 
 - pubmed search stancu myelin for paper for ethics statement
 
-After we're done:
-- update Protocol and Analyzer
-- make it idiot proof 
-
-- Wednesday 10:00
-
-- notebookfm
-
-- exclusion messes up top 10 collection -> solved
-
-- redo basically all of Analyzer and make it also return usable values
-
-- make RESULTS_DATES df even if useless just for completion's sake
-
 - background level comparable to r420h mice maybe (for thesis writing) real cba comparison with littermates
 
-- check if the strength and everything changes after 2nd mouse onwards or in what way it decreases (or RT increases)
-also do literature search
-investigate further
+- check if the strength and everything changes after 2nd mouse onwards or in what way it decreases (or RT increases) 
+- do literature search and investigate further
+
+- check if we exclude too many recordings -> LOT'S of offset trials excluded -> mostly consists of (all) offset ASRs
+
+- check for correlation between peakValue and AUC / tau
 
 
-check if we exclude too many recordings -> LOT'S of offset trials excluded -> mostly consists of (all) offset ASRs
-check for correlation between peakValue and AUC / tau
+
+After we're done:
+- update Protocol 
+- make everything portable
+- make it idiot proof 
