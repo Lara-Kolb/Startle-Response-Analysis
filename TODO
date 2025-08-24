@@ -1,7 +1,7 @@
 Mihai on vacation after August 21st, so discuss on 18th (Monday)
 back on 9th-10th
 
-
+- get: %PPI, IPI, max 100ms, peak-to-peak amplitude (50 ms), max peak-to-trough (200 ms), first peak (50 ms), RMS (???ms)
 
 - shorten link to raw data in thesis
 
@@ -11,10 +11,6 @@ back on 9th-10th
 
 - check if the strength and everything changes after 2nd mouse onwards or in what way it decreases (or RT increases) 
 - do literature search and investigate further
-
-- check if we exclude too many recordings -> LOT'S of offset trials excluded -> mostly consists of (all) offset ASRs
-
-- check for correlation between peakValue and AUC / tau
 
 
 
