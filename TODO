@@ -1,29 +1,14 @@
-- AUC seems to be the most consistent strength metric across date and sex
-
+TODO:
 - fix missing citations
-
-- summarize results; discussion
-
 - connect paragraphs
-
 - check and rewrite introduction
+- explain background top recordings *plallert and longenecker
+- give data for eff str dates male vs female
+- talk to conny: go through results (dont show thesis) and check if shes happy with the questions asked and answered in the thesis
+- MannwhitneyU slope test on controls shows that RT is not affected by top ten recordings but peakval is, update graph and description
 
-- what do we do with difference?
-
-
-Results:
-- gap in noise does not cause startle
-- there's an unknown software error cutting away some recordings
-- data is often non-normal, despite past research using tests that assume normality
-- several variables are suitable for measuring strength, with peak value being the best for comparability with other research, tau for avoiding correlations with reaction time and AUC for consistency across a session, meaning that a decay fit may be better suited for ASR strength measurements
-- first 20 recordings should be discarded
-- experiments only show strong impacts on ASR delay in comparison to the tone in noise control experiment
-- experiment type does impact \%PPI, with offset PPI and gap duration in particular causing more PPF than the tone in noise control
-- there are strong sex differences in strength metrics, and lesser in delay metrics
-- there are strong date fluctuations, in particular for strength metrics
-- grouping should happen by both sex and date
-- within one trial, several metrics change significantly, though less so than previous research suggests, meaning that the length of one recording session per animal is likely short enough to not strongly skew the data
-- recording order and thus time of day has a strong effect on strength metrics, especially for males where ASR strength decreases strongly, while females show a slight increase, which implies animals not currently recorded to be stressed and exhausted by their transfer and change of environment
+Questions:
+- what do we do with difference? wait for mihai
 
 
 After we're done:
