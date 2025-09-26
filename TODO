@@ -9,24 +9,12 @@ TODO:
 
 
 discussion: 
-  louder background for offset ASR?
-  increase trial amount to compensate for top removal of prepulseless ones? (we can go up in trials since session length is short enough)
-  change gap duration to move window TOWARDS startle instead of away to avoid 100ms window and thus facilitation?
-
-top 10: plot %ppi on y and top on x for peakvalue, so does %ppi change with the top recordings?
-  something seems wrong with how we take the top recordings
-  always show %PPI instead of raw values; always put in relation to prepulse
-  remove prepulseless ones from tops, only take prepulse trials
--------> there is no top difference
-
-gap duration should go into the PPF threshold since the window goes into the 100ms range I think since the window moves away from the startle; could explain %PPI
-
-remove ASR control from ALL analysis since its only use for %PPI
----> effects stay the same
-
-recording order:
-  check if ASR control ALSO decreases, otherwise PPI goes higher (if ASR control increases then they are STRONGER with stress)
----> nope, weaker even for ASR control
+  louder background for testing offset ASR again
+  increase trial amount to compensate for top removal of prepulseless ones (we can go up in trials since session length is short enough)
+  change gap duration to move window TOWARDS startle instead of away to avoid 100ms window and thus facilitation
+  RMS may be the best strength metric
+  session length might be an issue due to fatigue and/or increased inhibition due to stress
+  IPI not just dependent on gap length but also on animal stress
 
 
 Questions:
