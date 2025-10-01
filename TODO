@@ -6,13 +6,14 @@ TODO:
 - refine figures
 - explain background top recordings *plallert and longenecker
 - give data for eff str dates male vs female
+- fix tables
 
 
 discussion: 
   louder background for testing offset ASR again
   increase trial amount to compensate for top removal of prepulseless ones (we can go up in trials since session length is short enough)
   change gap duration to move window TOWARDS startle instead of away to avoid 100ms window and thus facilitation
-  RMS may be the best strength metric
+  RMS may be the best strength metric, but AUC might be useful for avoiding sex differences
   session length might be an issue due to fatigue and/or increased inhibition due to stress
   IPI not just dependent on gap length but also on animal stress
 
