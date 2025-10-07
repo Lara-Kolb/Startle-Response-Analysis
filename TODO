@@ -1,13 +1,10 @@
 TODO:
-- fix missing citations
 - connect paragraphs
 - check and rewrite introduction
 - figure descriptions
-- refine figures
 - explain background top recordings *plallert and longenecker
 - give data for eff str dates male vs female
-- fix tables
-
+- something is wrong with tau
 
 discussion: 
   louder background for testing offset ASR again
@@ -17,13 +14,6 @@ discussion:
   session length might be an issue due to fatigue and/or increased inhibition due to stress
   IPI not just dependent on gap length but also on animal stress
 
-
-Questions:
-- what do we do with difference? wait for mihai
-
-
 After we're done:
-- update Protocol 
-- make everything portable
 - make it idiot proof 
 - ende november, 4 wochen, HIWI physio kurs
