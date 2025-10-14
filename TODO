@@ -1,26 +1,8 @@
 TODO:
 - more photos
-- add/remove abbreviations
 - rewrite abstract and introduction
 - smooth out discussion
-
-PPI section:
-  - also, the data they quote is almost three decades old, so maybe there needs to be a new examination of the IPI's impact altogether as well
-  - Also, the Lauer review states that PPF can also be caused by intervals shorter than 10ms, which I think shouldn't happen in our case, but also that the interval for PPF is not 100ms, but anywhere from 50-200ms, which would explain why especially gap duration causes PPF, since the IPI is always 50ms or higher, and it also explains why gap depth with the same IPI also causes it - however, tone in noise also has an IPI of 50ms but causes strong inhibition, so this would also back up my theory that PPF vs PPI behavior is also highly dependent on experiment type and not only on the IPI, and an interesting test could be to do the tone in noise experiment but with an IPI of 100 or even 200ms and see if it still causes PPI
-  - also interesting is that around 10% of all offset PPI experiments cause PPF, although their IPI is technically 0, though this could be the <10ms threshold they mention
-
-
-- research on PPF old and confliced
-- gap depth, gap duration and offset PPI follow expectations, tone in noise does not in terms of PPF behavior using onlt IPI as a reference point
-
-
-
-
-
-
-
-
-
+- fix Lauer references (2018 not 17?)
 
 
 
