@@ -3,26 +3,17 @@ TODO:
 - rewrite abstract and introduction
 - smooth out discussion
 - fix Lauer references (2018 not 17?)
-
-
-
-- normality test once fine? or per plot? per plot/tests
 - more photos
-- %PPI table fix
-- include outliers exp peakvalue and reactiontime
+- fix everything
 
 
-remove peak decay fit
-try exponential fit for rise, try to find point to get better reaction time (start at bg noise)
+
+
+
 not higher but longer reactiontime
-overlay satter on %PPI, color dots male and female (same for experiment)
-exclude decay tau, only expo tau
-
-did we group ASR control male and female too?
 also check if females have smaller PPI than males, if same we can use both sexes 
 rename rec order to animal? 
-ASR control per animal not per experiment, so per animal per day
-only on day one did we have the mice out in the open, day 2 and 3 in noise chamber (do a plot like for dates)
+only on day one did we have the mice out in the open, day 2 and 3 in noise chamber (date plot backs this up)
 
 
 
