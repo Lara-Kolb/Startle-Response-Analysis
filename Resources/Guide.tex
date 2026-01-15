@@ -1,0 +1,165 @@
+\documentclass[english,12pt,a4paper]{article}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\title{Startle Response Analysis Guide}
+\author{Lara Kolb}
+\date{\today}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{csquotes}
+\usepackage{amsmath}  
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{ragged2e}
+\usepackage[percent]{overpic}
+\usepackage{makecell}
+\usepackage{booktabs}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{tocloft}
+\usepackage{subcaption}
+\usepackage{booktabs}  
+\usepackage{siunitx}   
+\usepackage{multirow}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgf}
+\usepackage{tikzscale}   % <-- allows \includegraphics for .pgf
+\pgfplotsset{width=10cm,compat=1.9}
+\usepgfplotslibrary{external}
+\usepackage{graphicx}   
+\usepackage{bookmark}
+\bookmarksetup{
+	numbered,
+}
+\usepackage{siunitx}
+\sisetup{}
+\usepackage{pdfpages}
+
+
+\usepackage[labelfont=bf]{caption}
+%\usepackage[numbers]{natbib}   
+\titleformat{\paragraph}
+{\normalfont\small\bfseries}{\theparagraph}{1em}{} % \small makes it smaller
+\titlespacing*{\paragraph}{0pt}{1ex plus 0.2ex}{0.5ex} % tighter spacing
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\sethlcolor{red}
+%\bibliographystyle{plainnat} 
+%\usepackage[backend=bibtex,bibencoding=ascii]{biblatex}
+%\addbibresource{literature.bib}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{literature.bib}
+%\usepackage{biblatex}
+
+\newcommand{\signature}[3]{%
+	\parbox{\textwidth}{
+		\centering
+		#1, den \today
+		
+		\vspace{\baselineskip}
+		\vspace{\baselineskip}
+		
+		\parbox{\linewidth}{
+			\centering
+			\rule{#3}{0.5pt}\
+			#2 
+		}
+	}
+}
+
+\graphicspath{{images/}} %images sourcefolder
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg} %datatypes
+\fboxsep=2pt %distance of border
+\fboxrule=0.5pt %thickness of border
+%\setstretch{1.5} %spacing
+\onehalfspacing
+\setlength{\parskip}{1em} %space after paragraph
+\setlength{\parindent}{0pt} %paragraph indentation
+
+% Reduce font size of List of Tables title
+%\renewcommand{\cftloftitlefont}{\normalsize\bfseries}
+%\renewcommand{\cftafterloftitle}{\vskip 10pt}
+
+% Reduce font size of List of Figures title
+%\renewcommand{\cftlottitlefont}{\normalsize\bfseries}
+%\renewcommand{\cftafterlottitle}{\vskip 10pt}
+
+% Remove headers
+%\renewcommand{\listfigurename}{}
+%\renewcommand{\listtablename}{}
+
+\begin{document}
+	\begin{center}
+		\textbf{\LARGE Guide on Startle Response Analysis}
+		
+		\vspace{1cm}
+		
+		\textit{Lara Kolb}
+	\end{center}
+	
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Introduction}
+	lorem ipsum dolor
+	
+	
+	
+	\newpage
+	\section{Experimental Design}
+	\subsection{Setup}
+	
+	\subsection{Procedure}
+	detail the necessary Box 1 settings to not cause issues (Animal No is internal animal number, group is actual animal number, etc; 2 options for defining animal number); note somewhere that missing repetitions becomes redundant if mixed there are mixed repetition counts; 120 trials = roughly 40 minutes
+	
+	\newpage
+	\section{Analysis}
+	
+	\subsection{Getting the Example Data}
+	Once cloned onto your device, you can use the software right away. However, if you want to test it with prior data, you can do so by downloading it from \url{zenodo.org} under \url{ https://doi.org/10.5281/zenodo.15740400}.
+	
+	\subsection{File Structure}
+	\begin{itemize}
+		\item Your Data: folder containing your own data; you can choose whatever name you like, as long as it matches the one referenced in the notebook
+		\item 15740400: folder containing the exemplary data; needs to be downloaded and unzipped into the folder separately
+		\item Exemplary Output: folder containing the exemplary noteboook output
+		\item Output: folder containing the notebook output; if you are using the exemplary data, this will be the same as the exemplary output
+		\item Resources: folder containing resources for the generation of the guide pdf; not important unless the pdf breaks
+		\item Guide.pdf: this guide in pdf form
+		\item Main.ipynb: the notebook used for the analysis
+	\end{itemize}
+	
+	\subsection{Usage}
+	To use the notebook, you first have to install all required packages. Open the console using Strg + Ö (QWERTZ) or Ctrl + ` (QWERTY) and enter the command \texttt{pip install MODULENAME} for all modules, replacing MODULENAME with the respective name of each module.
+	
+	If you wish to simply test the notebook using the exemplary data, click \texttt{Run All}. If everything is set up correctly, the Output folder should now contain the same files as the \texttt{Exemplary Output} folder. 
+	
+	To use your own data, you need to first paste your own data folder containing the CSV files of all measurements into the main \texttt{Startle Response Analysis} folder. Then, navigate to the \texttt{Settings} section at the top and enter your data folder name into \texttt{input\_folder}. If no ßtexttt{input\_folder} is given, the program defaults to using the example data. Lastly, change settings accordingly to suit your data. This includes setting \texttt{Repetition Count} to the number of repetitions per trial in your data as well as updating \texttt{sex\_dict} and \texttt{startle\_times}. You can now run all cells and examine the output.
+	
+	\newpage
+	\section{Troubleshooting}
+	\subsection{Hardware}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+	\subsection{Software}
+	\begin{itemize}
+		\item FileNotFoundError when running example data: check if \texttt{input\_folder} is correctly set to \texttt{""} and that the \texttt{example\_folder} matches the name of your downloaded example data.
+	\end{itemize}
+	
+\end{document}
